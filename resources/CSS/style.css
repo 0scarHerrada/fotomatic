@@ -284,7 +284,7 @@ footer {
 /* Media Queries */
 
 /* Mobile */
-@media (min-width: 290px) and (max-width: 749px) {
+@media (min-width: 290px) and (max-width: 767px) {
 
     /* Turn off Desktop Header */
     .desktop-header {
@@ -451,7 +451,7 @@ footer {
 }
 
 /* Tablet */
-@media (min-width: 750px) and (max-width: 1022px) {
+@media (min-width: 768px) and (max-width: 1022px) {
 
     /* Turn off Desktop Header */
     .desktop-header {
