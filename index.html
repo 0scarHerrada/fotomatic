@@ -14,8 +14,8 @@
     </head>
     <!--Body-->
     <body>
-      <!--Header-->
-      <header>
+      <!-- Desktop Header -->
+      <header class="desktop-header">
         <div class="header logo-text">Fotomatic</div>
         <div></div>
         <div class="header nav">
@@ -25,7 +25,58 @@
             <li>
               <div class="social-div">
                 <a href="#" class="header-a">Follow Us</a>
-                <a href="" class="social-a"><img src="resources/images/instagram.png" alt="#" class="social-media-logo"></a>
+                <a href="#" class="social-a"><img src="resources/images/instagram.png" alt="#" class="social-media-logo"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- Tablet Header -->
+      <header class="tablet-header">
+        <div class="header logo-text">Fotomatic</div>
+        <div></div>
+        <div class="header nav">
+          <ul class="header ul">
+            <li><a href="#" class="header-a">Product Detail</a></li>
+            <li><a href="#" class="header-a">About Us</a></li>
+            <li>
+              <div class="social-div">
+                <a href="#" class="header-a">Follow Us</a>
+                <a href="#" class="social-a"><img src="resources/images/instagram.png" alt="#" class="social-media-logo"></a>
+              </div>
+            </li>
+            <li>
+              <!-- Small Screen Button (ss) -->
+              <div class="ss-button-div">
+              <a class="ss-button" href="#">Join Us</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <!-- Mobile Header -->
+      <header class="mobile-header">
+        <div class="header nav">
+          <ul class="header ul">
+            <li>
+              <a href="#" class="social-a">
+                <img src="resources/images/ic-logo.svg" alt="#" class="social-media-logo">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-a">
+                <img src="resources/images/ic-product-detail.svg" alt="#" class="social-media-logo">
+              </a>
+            </li>
+            <li>
+              <a href="#" class="social-a">
+                <img src="resources/images/ic-about-us.svg" alt="#" class="social-media-logo">
+              </a>
+            </li>
+            <li>
+              <!-- Small Screen Button (ss) -->
+              <div class="ss-button-div">
+                <a class="ss-button" href="#">Join Us</a>
               </div>
             </li>
           </ul>
@@ -73,10 +124,10 @@
             <div class="filters-image-container">
               <img src="resources/images/filter-2.png" alt="#">
             </div>
-            <div class="filters-image-container">
+            <div class="filters-image-container mobile-image">
               <img src="resources/images/filter-3.png" alt="#">
             </div>
-            <div class="filters-image-container">
+            <div class="filters-image-container mobile-image">
               <img src="resources/images/filter-4.png" alt="#">
             </div>
           </section>
@@ -86,7 +137,9 @@
       <footer>
         <section class="top-footer">
           <p>"It's truly something that could create a brand-new photography Renaissance"</p>
-          <img src="resources/images/photography-logo.png" alt="#">
+          <div class="top-footer-image-container">
+            <img src="resources/images/photography-logo.png" alt="#">
+          </div>
         </section>
         <section class="bottom-footer">
           <p class="copyright">© 2016 Fotomatic, All Rights Reserved</p>

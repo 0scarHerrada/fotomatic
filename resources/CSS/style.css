@@ -1,10 +1,6 @@
 
 /* Universal */
 
-html {
-    background-color: white;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,11 +8,17 @@ html {
     font-size: 16px;
     padding-inline-start: 0;
 }
-
 @font-face {
     font-family: "Damion";
     src:  url('../fonts/Damion-Regular.ttf') format('truetype');
 }
+.tablet-header {
+    display: none;
+}
+.mobile-header {
+    display: none;
+}
+
 
 
 /* Header */
@@ -41,7 +43,9 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 7.5%;
+    margin-top: 8%;
+    margin-right: 1rem;
+    align-items: center;
 }
 .header.ul li {
     display: contents;
@@ -58,11 +62,11 @@ a {
 .social-div {
     display: flex;
     justify-content: center;
-    width: 23%;
+    width: 30%;
 }
 .social-a {
     margin-left: 0.75rem;
-    width: 16%;
+    width: 14%;
     height: auto;
     overflow: hidden;
 }
@@ -71,7 +75,6 @@ a {
     height: auto;
     display: block;
 }
-
 
 
 /* Main */
@@ -139,6 +142,7 @@ a {
     font-weight: 300;
     line-height: 1.4;
 }
+
 
 
 /* --Features Section-- */
@@ -224,8 +228,12 @@ a {
 .filters-image-container {
     width: 25%;
     overflow: hidden;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
-
 .filters-image-container img {
     max-width: 100%;
     height: auto;
@@ -260,7 +268,7 @@ footer {
     background-color: #9b9b9b;
     color: white;
     display: grid;
-    grid-template-columns: 3fr 6fr 0.55fr;
+    grid-template-columns: 3fr 6fr 1fr;
     align-items: center;
     padding: 1rem;
 }
@@ -269,4 +277,341 @@ footer {
 }
 .copyright {
     margin-left: 2rem;
+}
+
+
+
+/* Media Queries */
+
+/* Mobile */
+@media (min-width: 290px) and (max-width: 749px) {
+
+    /* Turn off Desktop Header */
+    .desktop-header {
+        display: none;
+    }
+
+    html{
+        background-color: black;
+    }
+
+    /* Mobile Header */
+
+    .mobile-header {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: space-evenly;
+    }
+    .header.ul {
+        margin-top: 4%;
+    }
+    .mobile-header img {
+        width: 2.6rem;
+        height: auto;
+    }
+    .ss-button-div {
+        background-color: #9dc20b;
+        border-radius: 8%;
+        width: 18%;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ss-button {
+        color: white;
+        font-size: 1rem;
+        font-family: "Roboto-Mono-Regular", sans-serif;
+        font-weight: 500;
+    }
+
+
+    /* Mobile Sign-Up Section */
+
+    .sign-up {
+        height: 28rem;
+        background-position: right;
+    }
+    .sign-up-box {
+        background-color: inherit;
+        width: 29rem;
+        border: none;
+        padding: 7rem 0;
+        margin-left: 0;
+        text-shadow: 1px 1px 2px black;
+    }
+    .sign-up-box h4 {
+        display: none;
+    }
+
+
+    /* Mobile Features Section */
+
+    .features {
+        flex-direction: column;
+        gap: 1px;
+        height: 65rem;
+    }
+    .feature-image-container {
+        width: 99%;
+    }
+    .feature-image-container img {
+        margin-top: 1.5rem;
+        height: 65%;
+        min-width: 90%;
+        margin-bottom: -1rem;
+    }
+    .feature-image-text h2{
+        font-size: 1.75rem;
+    }
+    .feature-image-text p {
+         font-size: 1.3rem;
+     }
+
+
+    /* Mobile Filters Section */
+
+    .filters {
+        height: 24.5rem;
+        flex-direction: row;
+    }
+    .filters-section-text h2{
+        font-size: 2rem;
+        letter-spacing: -0.05rem;
+        line-height: 1;
+    }
+    .filters-section-text p{
+        margin-top: 1rem;
+        font-size: 1.4rem;
+        line-height: 1.5;
+    }
+    .filters-image-section {
+        display: grid;
+        height: 100%;
+        margin-top: 0;
+        grid-template-columns: 1fr;
+        align-content: space-evenly;
+    }
+    .filters-image-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        padding: 1rem;
+    }
+    .filters-image-container img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+    }
+    .mobile-image {
+        display: none;
+    }
+
+
+    /* Mobile Footer */
+
+    footer {
+        height: 35rem;
+        grid-auto-rows: 9fr 1fr;
+    }
+    .top-footer {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+        justify-items: center;
+        gap: 0;
+        padding: 1.75rem;
+        font-size: 2.5rem;
+    }
+    .top-footer p {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .top-footer-image-container {
+        width: 50%;
+        height: 60%;
+        overflow: hidden;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+    }
+    .top-footer-image-container img {
+        width: 70%;
+        height: 100%;
+    }
+    .bottom-footer {
+        grid-template-columns: 5fr 1fr 2fr;
+    }
+    .copyright {
+        margin-left: 0;
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 750px) and (max-width: 1022px) {
+
+    /* Turn off Desktop Header */
+    .desktop-header {
+        display: none;
+    }
+
+    /* Tablet Header */
+
+    .tablet-header {
+        display: grid;
+        grid-template-columns: 3fr 1fr 6fr;
+    }
+    .logo-text {
+        font-size: 2rem;
+        padding: 1.5rem 0 1rem 2rem;
+    }
+    .header.ul {
+        margin-top: 1.5rem;
+    }
+    .social-div {;
+        width: 21%;
+    }
+    .social-a {
+        margin-left: 0.4rem;
+        width: 14%;
+    }
+    .ss-button-div {
+        background-color: #9dc20b;
+        border-radius: 8%;
+        width: 15%;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ss-button {
+        color: white;
+        font-size: 1rem;
+        font-family: "Roboto-Mono-Regular", sans-serif;
+        font-weight: 500;
+    }
+
+
+    /* Tablet Sign-up Section */
+    .sign-up {
+        height: 42rem;
+    }
+    .sign-up-box {
+        background-color: inherit;
+        border: none;
+        padding: 4rem 0;
+        margin-left: 13%;
+        text-shadow: 1px 1px 2px black;
+    }
+    .sign-up-box h2 {
+        font-size: 4rem;
+    }
+    .sign-up-box h3 {
+        font-size: 3rem;
+    }
+
+
+    /* Tablet Features Section */
+
+    .features {
+        height: 42rem;
+        gap: 2%;
+    }
+    .feature-image-container {
+        width: 47%;
+        height: 90%;
+        padding: 1rem;
+    }
+    .feature-image-container img {
+        height: 55%;
+        max-width: 90%
+    }
+    .feature-image-text {
+        text-align: left;
+        width: 80%;
+        align-self: flex-start;
+        margin-left: 1.5rem;
+    }
+    .feature-image-text h2 {
+        font-weight: 800;
+    }
+
+
+    /* Tablet Filters Section */
+
+    .filters {
+        height: 28rem;
+    }
+    .filters-section-text {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .filters-section-text h2{
+        font-size: 2.6rem;
+        letter-spacing: 0.1rem;
+    }
+    .filters-section-text p{
+        margin-top: 0.75rem;
+        font-size: 1.2rem;
+    }
+    .filters-image-section {
+        margin-top: 0;
+        height: 50%;
+        width: 99%;
+    }
+
+
+    /* Tablet Footer */
+
+    .top-footer {
+        padding: 1.5rem;
+    }
+    .top-footer p {
+        font-size: 2.3rem;
+    }
+    .bottom-footer {
+        grid-template-columns: 5fr 4fr 1.5fr;
+    }
+
+}
+
+/* Low-Res Laptop */
+@media (min-width: 1023px) and (max-width: 1439px) {
+
+    /* Low-Res Header */
+
+    .desktop-header {
+        grid-template-columns: 2fr 6fr 7fr;
+    }
+    .header.ul {
+        margin-top: 1.8rem;
+        justify-content: flex-end;
+        gap: 5%;
+    }
+    .social-div {;
+        width: 19.8%;
+    }
+    .social-a {
+        margin-left: 0.4rem;
+        width: 12%;
+    }
+
+
+    /* Low-Res Features Section */
+
+    .feature-image-container {
+        height: 70%;
+    }
+
+
+    /* Low-Res Filters Section */
+    .filters {
+        height: 38rem;
+    }
+    .filters-image-section {
+        height: 50%;
+    }
 }
